@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smoothie Machine</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>🍓 Build Your Perfect Smoothie! 🥤</h1>
+    <form id="smoothieForm">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+        <fieldset>
+            <legend>Smoothie Size:</legend>
+            <label><input type="radio" name="size" value="Small" data-price="3" required> Small - $3</label>
+            <label><input type="radio" name="size" value="Medium" data-price="5"> Medium - $5</label>
+            <label><input type="radio" name="size" value="Large" data-price="7"> Large - $7</label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Ingredients ($1 each):</legend>
+            <label><input type="checkbox" name="ingredients" value="Strawberries" data-price="1"> Strawberries</label>
+            <label><input type="checkbox" name="ingredients" value="Bananas" data-price="1"> Bananas</label>
+            <label><input type="checkbox" name="ingredients" value="Mangoes" data-price="1"> Mangoes</label>
+            <label><input type="checkbox" name="ingredients" value="Blueberries" data-price="1"> Blueberries</label>
+            <label><input type="checkbox" name="ingredients" value="Spinach" data-price="1"> Spinach</label>
+        </fieldset>
+
+        <label for="extras">Add-ons ($2 each):</label>
+        <select id="extras" name="extras" data-price="2">
+            <option value="None" data-price="0">None</option>
+            <option value="Protein Powder">Protein Powder</option>
+            <option value="Almond Milk">Almond Milk</option>
+            <option value="Chia Seeds">Chia Seeds</option>
+        </select>
+
+        <label for="comments">Special Instructions:</label>
+        <textarea id="comments" name="comments" rows="4" placeholder="Any special requests?"></textarea>
+
+        <button type="submit">Order</button>
+    </form>
+
+    <div id="output">
+        <div id="smoothieImage">
+            <img id="smoothieCup" src="https://media.istockphoto.com/id/1325918814/photo/set-of-different-milkshakes-in-disposable-plastic-glasses.jpg?s=612x612&w=0&k=20&c=5SDOf855Yi8dGDAghWPPOHiNLgR4FkZiqsR1lvh5YhM=" alt="Smoothie Cup">
+        </div>
+        <div id="smoothieDetails"></div>
+        <div id="smoothieBill"></div>
+        <div id="smoothieFact"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
